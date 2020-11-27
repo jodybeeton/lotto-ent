@@ -169,8 +169,13 @@ def calculate_age():
             birth_month_entry.get() + " " + birth_day_entry.get() +" " + "Logged on at: " + str(now) + "\n")
     f.close()
 
+ #doctest testing
+    '''
+    >>> calculate_age()
+    True
+    '''
 
-    #date of birth
+   #date of birth
     b_year = int(birth_year_entry.get())
     b_month = int(birth_month_entry.get())
     b_day = int(birth_day_entry.get())
@@ -185,11 +190,11 @@ def calculate_age():
         messagebox.showinfo(message, "Logged in")
         Login.destroy()
         game_time()
+        return True
 
     else:
         message = "Declined"
         messagebox.showerror(message, "Denied" + " " + "Under Age")
-        return age
 
 def quit():
     Login.destroy()
